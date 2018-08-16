@@ -1,0 +1,43 @@
+<html>
+    <head>
+            <script src="lib/angular.min.js"></script>
+            <script type="text/javascript">
+
+
+	                var app=angular.module("sample",[]).run(["$rootScope",function($rootScope){
+
+                        $rootScope.gst_per=12;
+
+                    }]);
+                    app.controller("product_details",["$scope","$rootScope",function($scope,$rootScope){
+
+                        $scope.name="Shampu";
+                        $rootScope.gst_per=13;
+                        $scope.price=11;
+                    }]);    
+
+                    app.controller("calculate",["$scope","$rootScope",function($scope,$rootScope){
+
+                        $scope.final_price=$scope.price+$scope.price*($rootScope.gst_per/100);
+                    }]);
+
+
+
+            </script>
+
+    </head>
+
+    <body ng-app="sample">
+            <div ng-controller="product_details">
+            
+                product_details  {{name}}  price{{price}}   GST PER{{gst_per}}
+                <div ng-controller="calculate">
+
+                        Final price {{final_price}}
+                        
+                </div>
+            
+            </div>
+            GST {{gst_per}}
+    </body>
+</html>
