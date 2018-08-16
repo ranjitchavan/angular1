@@ -1,0 +1,26 @@
+<html>
+    <head>
+            <script src="lib/angular.min.js"></script>
+           <script type="text/javascript" src="oneWay.js"></script>
+    </head>
+
+    <body ng-app="app">
+        <div ng-controller="student">
+
+            <span ng-bind="sub1"></span><br>
+
+            <span ng-bind="sub2"></span><br>
+
+            <span ng-bind="sub3"></span><br>
+
+            <span ng-bind="sub4"></span><br>
+
+            <span ng-bind="sub5"></span><br>
+            <button ng-click="calaculate()">Total Marks</button>
+            Total {{total}} 
+            Percentage{{per}}
+        </div>
+    
+    
+    </body>
+</html>

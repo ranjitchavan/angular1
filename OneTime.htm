@@ -1,0 +1,17 @@
+<html>
+    <head>
+            <script src="lib/angular.min.js"></script>
+           <script type="text/javascript" src="oneTime.js"></script>
+    </head>
+
+    <body ng-app="app">
+        <div ng-controller="emp">
+
+            <span ng-bind="salary"></span>
+            <button ng-click="makeDouble()">Double Salary</button>
+            Salary {{::salary}} <!--One Time Binding-->
+        </div>
+    
+    
+    </body>
+</html>
