@@ -1,15 +1,31 @@
 <html>
     <head>
             <script src="lib/angular.min.js"></script>
-           <script type="text/javascript" src="oneTime.js"></script>
+           <script type="text/javascript" src="twoWay.js"></script>
     </head>
 
     <body ng-app="app">
-        <div ng-controller="emp">
+        <div ng-controller="exam_result">
+            
+            <center>
+                    <table>
+                            <tr>
+                                <td>Enter A</td>
+                                <td><input type="text" ng-model="sub1"></td>
+                            </tr>
+                            
+                            <tr>
+                                    <td>Enter B</td>
+                                    <td><input type="text" ng-model="sub2"></td>
+                            </tr>
+                    </table>
+                            <button ng-click="result()">Sum</button>
+                            <br>
+                           Result  {{sub1}}+{{sub2}} =  <span ng-bind="total"></span>
 
-            <span ng-bind="salary"></span>
-            <button ng-click="makeDouble()">Double Salary</button>
-            Salary {{::salary}} <!--One Time Binding-->
+            </center>
+            
+        
         </div>
     
     
